@@ -1,0 +1,284 @@
+:root {
+    --background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+    --text-color: #fff;
+    --lis-color: #dc7000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: var(--background-color);
+    width: 100%;
+}
+
+.container {
+    width: 87.5rem;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px 0px;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+    transition: 500ms ease;
+}
+
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.act::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: var(--lis-color);
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li:hover {
+    transform: translateY(-1px);
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid var(--lis-color);
+}
+
+header nav ul li.btn a{
+    background-color: #fa9021;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: 0.5s all ease;
+}
+
+header nav ul li.btn a:hover {
+        background-color: var(--lis-color);
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-info {
+    width: 33.125rem;
+    padding-top: 70px;
+}
+
+.hero-info h2 {
+    color: var(--lis-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.hero-info h1 {
+    font-weight: 600;
+    font-size: 3.125rem;
+}
+
+.hero-info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0px;
+}
+
+.hero-info .btn {
+    background-color: #fa9021;
+    color: var(--text-color);
+    border-radius: 30px;
+    padding: 15px 30px;
+    border: 0;
+    font-weight: 600;
+    transition: 500ms ease;
+    font-size: 1.125rem;
+}
+
+.hero-info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.hero img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: bold;
+    font-size: 1.875rem;
+}
+
+.trending .see-all, .projects .see-all {
+    text-decoration: none;
+    background-color: #ffffff43;
+    color: var(--text-color);
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    border-radius: 10px;
+    transition: 200ms ease-in-out;
+}
+
+.trending .see-all:hover, .projects .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.trending .games span{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.lbl {
+    padding: 50px 0;
+    font-size: 2.188rem;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+.banner h3 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 26.042vw;
+}
+
+.banner img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.features {
+    background: url('/Img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0px;
+}
+
+.features h3,
+.features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 1.875rem;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+.features .info .block {
+    margin-bottom: 15px;
+}
+
+.projects {
+    padding: 100px 0;
+}
+
+.projects h3 {
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.projects p {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.projects .images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.projects .see-all {
+    width: 70px;
+    text-align: none;
+    float: none;
+    margin: 0 auto;
+}
+
+.projects .see-all:hover {
+    transform: scale(1.1);
+}
